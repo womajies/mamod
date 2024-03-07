@@ -1,5 +1,8 @@
 # mamod
 
+## Project preview
+[Preview](https://womajies.github.io/mamod/).
+
 ## Project setup
 ```
 npm install
