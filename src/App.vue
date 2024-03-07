@@ -173,6 +173,10 @@ async function submitForm() {
   background-color: $white-color;
   border-radius: $border-radius-form;
 
+  @include on-breakpoint('lg') {
+    max-width: rem(800);
+  }
+
   .u-page-title {
     padding-top: 17px;
     padding-bottom: 17px;
@@ -221,6 +225,7 @@ async function submitForm() {
     &-bottom {
       display: flex;
       justify-content: space-between;
+      align-items: flex-start;
       flex-wrap: wrap;
 
       .checkbox {
@@ -231,7 +236,7 @@ async function submitForm() {
   }
 
   &__submit {
-    margin-top: 30px;
+    margin-top: rem(30);
   }
 }
 </style>

@@ -56,6 +56,10 @@ export default {
   cursor: pointer;
   user-select: none;
 
+  @include on-breakpoint('lg') {
+    max-width: rem(400);
+  }
+
   &--error {
     .checkbox__custom {
       &::before {

@@ -82,7 +82,7 @@ export default {
     }
 
     &:checked~.switcher__label::after {
-      transform: translateX(calc(100% + 2px));
+      transform: translateX(calc(100% + rem(2)));
     }
 
     &:disabled~.switcher__label {
@@ -126,7 +126,7 @@ export default {
 
 
   &__label {
-    padding-left: 45px;
+    padding-left: rem(45);
     display: block;
     position: relative;
     color: var(--text-sub-color);
@@ -137,10 +137,10 @@ export default {
       content: "";
       position: absolute;
       cursor: pointer;
-      top: 1px;
+      top: rem(1);
       left: 0;
-      width: 40px;
-      height: 19px;
+      width: rem(40);
+      height: rem(19);
       background-color: $input-border-color;
       border-radius: 100px;
       transition: background-color $transition-duration $transition-timing-function, border-color $transition-duration $transition-timing-function,
@@ -151,19 +151,19 @@ export default {
     &::after {
       content: "";
       position: absolute;
-      width: 19px;
-      height: 19px;
+      width: rem(19);
+      height: rem(19);
       left: 0;
-      top: 1px;
+      top: rem(1);
       background-color: white;
       border-radius: 100px;
-      border: 1px solid #cdced8;
+      border: rem(1) solid #cdced8;
       transition: transform $transition-duration $transition-timing-function, border-color $transition-duration $transition-timing-function;
     }
 
     &-text {
-      font-size: 16px;
-      line-height: 19px;
+      font-size: rem(16);
+      line-height: rem(19);
       font-weight: 500;
     }
 
