@@ -1,0 +1,40 @@
+@use "sass:math";
+
+@function stripUnit($value) {
+	@return math.div($value, $value * 0 + 1);
+}
+
+@function rem($size) {
+	@return #{math.div(stripUnit($size), stripUnit($default-font-size))}rem;
+}
+
+// Text truncating to width and lines
+@mixin text-truncate($trunc-width: 100%, $max-lines: 1) {
+  max-width: $trunc-width !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+
+  @if ($max-lines > 1) {
+    @supports (-webkit-line-clamp: $max-lines) {
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: initial !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: $max-lines !important;
+      -webkit-box-orient: vertical !important;
+    }
+  }
+}
+
+// Breakpoint media query
+@mixin on-breakpoint($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
