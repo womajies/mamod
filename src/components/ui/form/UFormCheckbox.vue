@@ -109,7 +109,7 @@ export default {
       transform: translate(-50%, -50%);
       width: rem(9);
       height: rem(7);
-      background-image: url("@/assets/images/check.svg");
+      background-image: url("@/assets/img/check.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;

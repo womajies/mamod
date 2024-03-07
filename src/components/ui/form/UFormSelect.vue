@@ -9,7 +9,7 @@
         Должность
       </div>
       <div class="select__icon">
-        <img :class="{ 'rotate-180': showOptions }" src="@/assets/images/arrow-down.svg" alt="Arrow down">
+        <img :class="{ 'rotate-180': showOptions }" src="@/assets/img/arrow-down.svg" alt="Arrow down">
       </div>
     </button>
     <transition name="fade">
