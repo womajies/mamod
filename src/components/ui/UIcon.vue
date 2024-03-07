@@ -77,9 +77,9 @@ export default {
     },
 
     href() {
-      return `/images/icon/${this.computedSection}.svg#${this.name}`
+      return process.env.NODE_ENV === 'production' ? `/mamod/images/icon/${this.computedSection}.svg#${this.name}` : `/images/icon/${this.computedSection}.svg#${this.name}`
     },
-  },
+  }
 }
 </script>
 
